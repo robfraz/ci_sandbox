@@ -4,10 +4,10 @@ jobs:
     docker:
       - image: circleci/python:3.5.3
       - image: postgres:9.5
-          environment:
-          - POSTGRES_USER=postgres
-          - POSTGRES_PASSWORD=amazing_password
-          - POSTGRES_DB=postgres
+        environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=amazing_password
+        - POSTGRES_DB=postgres
 
     working_directory: ~/repo
 
