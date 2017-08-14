@@ -1,5 +1,7 @@
-import psycopg2
+import os
 import json
+import psycopg2
+
 
 from random import randint, choice
 from string import ascii_lowercase
@@ -37,6 +39,11 @@ def test_database():
     conn.commit()
     cur.close()
     conn.close()
+
+
+def test_explore_circle_ci_environment():
+    print("Current working directory is: {}".format(os.getcwd()))
+    print("\nEnvironment: {}".format(os.environ))
 
 
 def _randstr(len=6):
